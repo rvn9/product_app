@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:product_app/date/remote/product_service.dart';
+import 'package:product_app/data/remote/product_service.dart';
 import 'package:product_app/models/products_model.dart';
 
 import '../injector.dart';

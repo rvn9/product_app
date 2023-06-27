@@ -13,13 +13,18 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i5;
+import 'package:product_app/auth_guard.dart' as _i6;
 import 'package:product_app/pages/login_page.dart' as _i1;
 import 'package:product_app/pages/product_detail.dart' as _i3;
 import 'package:product_app/pages/product_page.dart' as _i2;
 
 class AppRouters extends _i4.RootStackRouter {
-  AppRouters([_i5.GlobalKey<_i5.NavigatorState>? navigatorKey])
-      : super(navigatorKey);
+  AppRouters({
+    _i5.GlobalKey<_i5.NavigatorState>? navigatorKey,
+    required this.authGuard,
+  }) : super(navigatorKey);
+
+  final _i6.AuthGuard authGuard;
 
   @override
   final Map<String, _i4.PageFactory> pagesMap = {
@@ -49,8 +54,15 @@ class AppRouters extends _i4.RootStackRouter {
   @override
   List<_i4.RouteConfig> get routes => [
         _i4.RouteConfig(
+          '/#redirect',
+          path: '/',
+          redirectTo: 'login_page',
+          fullMatch: true,
+        ),
+        _i4.RouteConfig(
           LoginPageRoute.name,
           path: 'login_page',
+          guards: [authGuard],
         ),
         _i4.RouteConfig(
           ProductPageRoute.name,

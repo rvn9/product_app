@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'auth_guard.dart';
 import 'injector.dart';
 import 'routes/router.gr.dart';
 
-void runPlacesApp() async {
+void runProductApp() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Injector.initialize();
-  runApp(const PlaceApp());
+  runApp(const ProductApp());
 }
 
 void main() {
-  runPlacesApp();
+  runProductApp();
 }
 
-class PlaceApp extends StatelessWidget {
-  const PlaceApp({super.key});
+class ProductApp extends StatelessWidget {
+  const ProductApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final appRouter = AppRouters();
+    final appRouter = AppRouters(authGuard: AuthGuard());
     return ScreenUtilInit(
       designSize: const Size(360, 800),
       minTextAdapt: true,
       builder: (BuildContext context, Widget? child) => MaterialApp.router(
-        routerDelegate: appRouter.delegate(
-          initialRoutes: [const HomePageRoute()],
-        ),
+        routerDelegate: appRouter.delegate(),
         routeInformationParser: appRouter.defaultRouteParser(),
       ),
     );

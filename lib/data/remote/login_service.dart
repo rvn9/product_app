@@ -11,7 +11,7 @@ class LoginService extends Endpoint {
 
   factory LoginService.create() => LoginService(getIt.get());
 
-  Future<String> getNearbyPlaces({
+  Future<String> login({
     required String username,
     required String password,
   }) async {

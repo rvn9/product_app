@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'login_cubit.dart';
+part of 'authentication_cubit.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$LoginState {
+mixin _$AuthenticationState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -43,42 +43,42 @@ mixin _$LoginState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginStateInitial value) initial,
-    required TResult Function(_LoginStateLoading value) loading,
-    required TResult Function(_LoginStateSuccess value) success,
-    required TResult Function(_LoginStatesError value) error,
+    required TResult Function(_AuthenticationStateInitial value) initial,
+    required TResult Function(_AuthenticationStateLoading value) loading,
+    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStatesError value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoginStateInitial value)? initial,
-    TResult? Function(_LoginStateLoading value)? loading,
-    TResult? Function(_LoginStateSuccess value)? success,
-    TResult? Function(_LoginStatesError value)? error,
+    TResult? Function(_AuthenticationStateInitial value)? initial,
+    TResult? Function(_AuthenticationStateLoading value)? loading,
+    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStatesError value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginStateInitial value)? initial,
-    TResult Function(_LoginStateLoading value)? loading,
-    TResult Function(_LoginStateSuccess value)? success,
-    TResult Function(_LoginStatesError value)? error,
+    TResult Function(_AuthenticationStateInitial value)? initial,
+    TResult Function(_AuthenticationStateLoading value)? loading,
+    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $LoginStateCopyWith<$Res> {
-  factory $LoginStateCopyWith(
-          LoginState value, $Res Function(LoginState) then) =
-      _$LoginStateCopyWithImpl<$Res, LoginState>;
+abstract class $AuthenticationStateCopyWith<$Res> {
+  factory $AuthenticationStateCopyWith(
+          AuthenticationState value, $Res Function(AuthenticationState) then) =
+      _$AuthenticationStateCopyWithImpl<$Res, AuthenticationState>;
 }
 
 /// @nodoc
-class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
-    implements $LoginStateCopyWith<$Res> {
-  _$LoginStateCopyWithImpl(this._value, this._then);
+class _$AuthenticationStateCopyWithImpl<$Res, $Val extends AuthenticationState>
+    implements $AuthenticationStateCopyWith<$Res> {
+  _$AuthenticationStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -87,35 +87,39 @@ class _$LoginStateCopyWithImpl<$Res, $Val extends LoginState>
 }
 
 /// @nodoc
-abstract class _$$_LoginStateInitialCopyWith<$Res> {
-  factory _$$_LoginStateInitialCopyWith(_$_LoginStateInitial value,
-          $Res Function(_$_LoginStateInitial) then) =
-      __$$_LoginStateInitialCopyWithImpl<$Res>;
+abstract class _$$_AuthenticationStateInitialCopyWith<$Res> {
+  factory _$$_AuthenticationStateInitialCopyWith(
+          _$_AuthenticationStateInitial value,
+          $Res Function(_$_AuthenticationStateInitial) then) =
+      __$$_AuthenticationStateInitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoginStateInitialCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$_LoginStateInitial>
-    implements _$$_LoginStateInitialCopyWith<$Res> {
-  __$$_LoginStateInitialCopyWithImpl(
-      _$_LoginStateInitial _value, $Res Function(_$_LoginStateInitial) _then)
+class __$$_AuthenticationStateInitialCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res,
+        _$_AuthenticationStateInitial>
+    implements _$$_AuthenticationStateInitialCopyWith<$Res> {
+  __$$_AuthenticationStateInitialCopyWithImpl(
+      _$_AuthenticationStateInitial _value,
+      $Res Function(_$_AuthenticationStateInitial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoginStateInitial implements _LoginStateInitial {
-  const _$_LoginStateInitial();
+class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
+  const _$_AuthenticationStateInitial();
 
   @override
   String toString() {
-    return 'LoginState.initial()';
+    return 'AuthenticationState.initial()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoginStateInitial);
+        (other.runtimeType == runtimeType &&
+            other is _$_AuthenticationStateInitial);
   }
 
   @override
@@ -161,10 +165,10 @@ class _$_LoginStateInitial implements _LoginStateInitial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginStateInitial value) initial,
-    required TResult Function(_LoginStateLoading value) loading,
-    required TResult Function(_LoginStateSuccess value) success,
-    required TResult Function(_LoginStatesError value) error,
+    required TResult Function(_AuthenticationStateInitial value) initial,
+    required TResult Function(_AuthenticationStateLoading value) loading,
+    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return initial(this);
   }
@@ -172,10 +176,10 @@ class _$_LoginStateInitial implements _LoginStateInitial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoginStateInitial value)? initial,
-    TResult? Function(_LoginStateLoading value)? loading,
-    TResult? Function(_LoginStateSuccess value)? success,
-    TResult? Function(_LoginStatesError value)? error,
+    TResult? Function(_AuthenticationStateInitial value)? initial,
+    TResult? Function(_AuthenticationStateLoading value)? loading,
+    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return initial?.call(this);
   }
@@ -183,10 +187,10 @@ class _$_LoginStateInitial implements _LoginStateInitial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginStateInitial value)? initial,
-    TResult Function(_LoginStateLoading value)? loading,
-    TResult Function(_LoginStateSuccess value)? success,
-    TResult Function(_LoginStatesError value)? error,
+    TResult Function(_AuthenticationStateInitial value)? initial,
+    TResult Function(_AuthenticationStateLoading value)? loading,
+    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -196,40 +200,44 @@ class _$_LoginStateInitial implements _LoginStateInitial {
   }
 }
 
-abstract class _LoginStateInitial implements LoginState {
-  const factory _LoginStateInitial() = _$_LoginStateInitial;
+abstract class _AuthenticationStateInitial implements AuthenticationState {
+  const factory _AuthenticationStateInitial() = _$_AuthenticationStateInitial;
 }
 
 /// @nodoc
-abstract class _$$_LoginStateLoadingCopyWith<$Res> {
-  factory _$$_LoginStateLoadingCopyWith(_$_LoginStateLoading value,
-          $Res Function(_$_LoginStateLoading) then) =
-      __$$_LoginStateLoadingCopyWithImpl<$Res>;
+abstract class _$$_AuthenticationStateLoadingCopyWith<$Res> {
+  factory _$$_AuthenticationStateLoadingCopyWith(
+          _$_AuthenticationStateLoading value,
+          $Res Function(_$_AuthenticationStateLoading) then) =
+      __$$_AuthenticationStateLoadingCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoginStateLoadingCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$_LoginStateLoading>
-    implements _$$_LoginStateLoadingCopyWith<$Res> {
-  __$$_LoginStateLoadingCopyWithImpl(
-      _$_LoginStateLoading _value, $Res Function(_$_LoginStateLoading) _then)
+class __$$_AuthenticationStateLoadingCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res,
+        _$_AuthenticationStateLoading>
+    implements _$$_AuthenticationStateLoadingCopyWith<$Res> {
+  __$$_AuthenticationStateLoadingCopyWithImpl(
+      _$_AuthenticationStateLoading _value,
+      $Res Function(_$_AuthenticationStateLoading) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoginStateLoading implements _LoginStateLoading {
-  const _$_LoginStateLoading();
+class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
+  const _$_AuthenticationStateLoading();
 
   @override
   String toString() {
-    return 'LoginState.loading()';
+    return 'AuthenticationState.loading()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoginStateLoading);
+        (other.runtimeType == runtimeType &&
+            other is _$_AuthenticationStateLoading);
   }
 
   @override
@@ -275,10 +283,10 @@ class _$_LoginStateLoading implements _LoginStateLoading {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginStateInitial value) initial,
-    required TResult Function(_LoginStateLoading value) loading,
-    required TResult Function(_LoginStateSuccess value) success,
-    required TResult Function(_LoginStatesError value) error,
+    required TResult Function(_AuthenticationStateInitial value) initial,
+    required TResult Function(_AuthenticationStateLoading value) loading,
+    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return loading(this);
   }
@@ -286,10 +294,10 @@ class _$_LoginStateLoading implements _LoginStateLoading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoginStateInitial value)? initial,
-    TResult? Function(_LoginStateLoading value)? loading,
-    TResult? Function(_LoginStateSuccess value)? success,
-    TResult? Function(_LoginStatesError value)? error,
+    TResult? Function(_AuthenticationStateInitial value)? initial,
+    TResult? Function(_AuthenticationStateLoading value)? loading,
+    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return loading?.call(this);
   }
@@ -297,10 +305,10 @@ class _$_LoginStateLoading implements _LoginStateLoading {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginStateInitial value)? initial,
-    TResult Function(_LoginStateLoading value)? loading,
-    TResult Function(_LoginStateSuccess value)? success,
-    TResult Function(_LoginStatesError value)? error,
+    TResult Function(_AuthenticationStateInitial value)? initial,
+    TResult Function(_AuthenticationStateLoading value)? loading,
+    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -310,40 +318,44 @@ class _$_LoginStateLoading implements _LoginStateLoading {
   }
 }
 
-abstract class _LoginStateLoading implements LoginState {
-  const factory _LoginStateLoading() = _$_LoginStateLoading;
+abstract class _AuthenticationStateLoading implements AuthenticationState {
+  const factory _AuthenticationStateLoading() = _$_AuthenticationStateLoading;
 }
 
 /// @nodoc
-abstract class _$$_LoginStateSuccessCopyWith<$Res> {
-  factory _$$_LoginStateSuccessCopyWith(_$_LoginStateSuccess value,
-          $Res Function(_$_LoginStateSuccess) then) =
-      __$$_LoginStateSuccessCopyWithImpl<$Res>;
+abstract class _$$_AuthenticationStateSuccessCopyWith<$Res> {
+  factory _$$_AuthenticationStateSuccessCopyWith(
+          _$_AuthenticationStateSuccess value,
+          $Res Function(_$_AuthenticationStateSuccess) then) =
+      __$$_AuthenticationStateSuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoginStateSuccessCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$_LoginStateSuccess>
-    implements _$$_LoginStateSuccessCopyWith<$Res> {
-  __$$_LoginStateSuccessCopyWithImpl(
-      _$_LoginStateSuccess _value, $Res Function(_$_LoginStateSuccess) _then)
+class __$$_AuthenticationStateSuccessCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res,
+        _$_AuthenticationStateSuccess>
+    implements _$$_AuthenticationStateSuccessCopyWith<$Res> {
+  __$$_AuthenticationStateSuccessCopyWithImpl(
+      _$_AuthenticationStateSuccess _value,
+      $Res Function(_$_AuthenticationStateSuccess) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoginStateSuccess implements _LoginStateSuccess {
-  const _$_LoginStateSuccess();
+class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
+  const _$_AuthenticationStateSuccess();
 
   @override
   String toString() {
-    return 'LoginState.success()';
+    return 'AuthenticationState.success()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoginStateSuccess);
+        (other.runtimeType == runtimeType &&
+            other is _$_AuthenticationStateSuccess);
   }
 
   @override
@@ -389,10 +401,10 @@ class _$_LoginStateSuccess implements _LoginStateSuccess {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginStateInitial value) initial,
-    required TResult Function(_LoginStateLoading value) loading,
-    required TResult Function(_LoginStateSuccess value) success,
-    required TResult Function(_LoginStatesError value) error,
+    required TResult Function(_AuthenticationStateInitial value) initial,
+    required TResult Function(_AuthenticationStateLoading value) loading,
+    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return success(this);
   }
@@ -400,10 +412,10 @@ class _$_LoginStateSuccess implements _LoginStateSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoginStateInitial value)? initial,
-    TResult? Function(_LoginStateLoading value)? loading,
-    TResult? Function(_LoginStateSuccess value)? success,
-    TResult? Function(_LoginStatesError value)? error,
+    TResult? Function(_AuthenticationStateInitial value)? initial,
+    TResult? Function(_AuthenticationStateLoading value)? loading,
+    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return success?.call(this);
   }
@@ -411,10 +423,10 @@ class _$_LoginStateSuccess implements _LoginStateSuccess {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginStateInitial value)? initial,
-    TResult Function(_LoginStateLoading value)? loading,
-    TResult Function(_LoginStateSuccess value)? success,
-    TResult Function(_LoginStatesError value)? error,
+    TResult Function(_AuthenticationStateInitial value)? initial,
+    TResult Function(_AuthenticationStateLoading value)? loading,
+    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -424,25 +436,28 @@ class _$_LoginStateSuccess implements _LoginStateSuccess {
   }
 }
 
-abstract class _LoginStateSuccess implements LoginState {
-  const factory _LoginStateSuccess() = _$_LoginStateSuccess;
+abstract class _AuthenticationStateSuccess implements AuthenticationState {
+  const factory _AuthenticationStateSuccess() = _$_AuthenticationStateSuccess;
 }
 
 /// @nodoc
-abstract class _$$_LoginStatesErrorCopyWith<$Res> {
-  factory _$$_LoginStatesErrorCopyWith(
-          _$_LoginStatesError value, $Res Function(_$_LoginStatesError) then) =
-      __$$_LoginStatesErrorCopyWithImpl<$Res>;
+abstract class _$$_AuthenticationStatesErrorCopyWith<$Res> {
+  factory _$$_AuthenticationStatesErrorCopyWith(
+          _$_AuthenticationStatesError value,
+          $Res Function(_$_AuthenticationStatesError) then) =
+      __$$_AuthenticationStatesErrorCopyWithImpl<$Res>;
   @useResult
   $Res call({Exception errorObject});
 }
 
 /// @nodoc
-class __$$_LoginStatesErrorCopyWithImpl<$Res>
-    extends _$LoginStateCopyWithImpl<$Res, _$_LoginStatesError>
-    implements _$$_LoginStatesErrorCopyWith<$Res> {
-  __$$_LoginStatesErrorCopyWithImpl(
-      _$_LoginStatesError _value, $Res Function(_$_LoginStatesError) _then)
+class __$$_AuthenticationStatesErrorCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res,
+        _$_AuthenticationStatesError>
+    implements _$$_AuthenticationStatesErrorCopyWith<$Res> {
+  __$$_AuthenticationStatesErrorCopyWithImpl(
+      _$_AuthenticationStatesError _value,
+      $Res Function(_$_AuthenticationStatesError) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -450,7 +465,7 @@ class __$$_LoginStatesErrorCopyWithImpl<$Res>
   $Res call({
     Object? errorObject = null,
   }) {
-    return _then(_$_LoginStatesError(
+    return _then(_$_AuthenticationStatesError(
       null == errorObject
           ? _value.errorObject
           : errorObject // ignore: cast_nullable_to_non_nullable
@@ -461,22 +476,22 @@ class __$$_LoginStatesErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoginStatesError implements _LoginStatesError {
-  const _$_LoginStatesError(this.errorObject);
+class _$_AuthenticationStatesError implements _AuthenticationStatesError {
+  const _$_AuthenticationStatesError(this.errorObject);
 
   @override
   final Exception errorObject;
 
   @override
   String toString() {
-    return 'LoginState.error(errorObject: $errorObject)';
+    return 'AuthenticationState.error(errorObject: $errorObject)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoginStatesError &&
+            other is _$_AuthenticationStatesError &&
             (identical(other.errorObject, errorObject) ||
                 other.errorObject == errorObject));
   }
@@ -487,8 +502,9 @@ class _$_LoginStatesError implements _LoginStatesError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoginStatesErrorCopyWith<_$_LoginStatesError> get copyWith =>
-      __$$_LoginStatesErrorCopyWithImpl<_$_LoginStatesError>(this, _$identity);
+  _$$_AuthenticationStatesErrorCopyWith<_$_AuthenticationStatesError>
+      get copyWith => __$$_AuthenticationStatesErrorCopyWithImpl<
+          _$_AuthenticationStatesError>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -530,10 +546,10 @@ class _$_LoginStatesError implements _LoginStatesError {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_LoginStateInitial value) initial,
-    required TResult Function(_LoginStateLoading value) loading,
-    required TResult Function(_LoginStateSuccess value) success,
-    required TResult Function(_LoginStatesError value) error,
+    required TResult Function(_AuthenticationStateInitial value) initial,
+    required TResult Function(_AuthenticationStateLoading value) loading,
+    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return error(this);
   }
@@ -541,10 +557,10 @@ class _$_LoginStatesError implements _LoginStatesError {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_LoginStateInitial value)? initial,
-    TResult? Function(_LoginStateLoading value)? loading,
-    TResult? Function(_LoginStateSuccess value)? success,
-    TResult? Function(_LoginStatesError value)? error,
+    TResult? Function(_AuthenticationStateInitial value)? initial,
+    TResult? Function(_AuthenticationStateLoading value)? loading,
+    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return error?.call(this);
   }
@@ -552,10 +568,10 @@ class _$_LoginStatesError implements _LoginStatesError {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_LoginStateInitial value)? initial,
-    TResult Function(_LoginStateLoading value)? loading,
-    TResult Function(_LoginStateSuccess value)? success,
-    TResult Function(_LoginStatesError value)? error,
+    TResult Function(_AuthenticationStateInitial value)? initial,
+    TResult Function(_AuthenticationStateLoading value)? loading,
+    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -565,12 +581,12 @@ class _$_LoginStatesError implements _LoginStatesError {
   }
 }
 
-abstract class _LoginStatesError implements LoginState {
-  const factory _LoginStatesError(final Exception errorObject) =
-      _$_LoginStatesError;
+abstract class _AuthenticationStatesError implements AuthenticationState {
+  const factory _AuthenticationStatesError(final Exception errorObject) =
+      _$_AuthenticationStatesError;
 
   Exception get errorObject;
   @JsonKey(ignore: true)
-  _$$_LoginStatesErrorCopyWith<_$_LoginStatesError> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$_AuthenticationStatesErrorCopyWith<_$_AuthenticationStatesError>
+      get copyWith => throw _privateConstructorUsedError;
 }

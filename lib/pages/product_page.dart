@@ -15,8 +15,10 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Login Pagae'),
+    return const Scaffold(
+      body: Center(
+        child: Text('Product Page'),
+      ),
     );
   }
 }

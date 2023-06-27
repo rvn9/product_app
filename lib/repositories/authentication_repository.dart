@@ -1,14 +1,15 @@
 import 'package:dartz/dartz.dart';
 
-import '../date/remote/login_service.dart';
+import '../data/remote/login_service.dart';
 import '../injector.dart';
 
-class LoginRepository {
+class AuthenticationRepository {
   final LoginService _loginService;
 
-  LoginRepository(this._loginService);
+  AuthenticationRepository(this._loginService);
 
-  factory LoginRepository.create() => LoginRepository(getIt.get());
+  factory AuthenticationRepository.create() =>
+      AuthenticationRepository(getIt.get());
 
   Future<Either<Exception, String>> login({
     required String username,
