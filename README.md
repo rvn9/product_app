@@ -1,16 +1,12 @@
 # product_app
 
-A new Flutter project.
+A Simple app to display product & add product using BLoC State Management
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<row>
+<img  src="https://github.com/rvn9/product_app/assets/56660530/0eccc14a-f04f-4948-843a-7963b04ac098" height="500rm">
+  &nbsp
+<img src="https://github.com/rvn9/product_app/assets/56660530/05b767b5-fa2f-41ed-84f6-6759f2712dfd" height="500rm" >
+  &nbsp
+</row>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
