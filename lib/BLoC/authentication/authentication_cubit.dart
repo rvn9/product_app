@@ -10,12 +10,11 @@ part 'authentication_state.dart';
 
 class AuthenticationCubit extends Cubit<AuthenticationState> {
   final AuthenticationRepository _authenticationRepository;
-  final SecureStorge _secureStorge;
-  AuthenticationCubit(this._authenticationRepository, this._secureStorge)
+
+  AuthenticationCubit(this._authenticationRepository)
       : super(const AuthenticationState.initial());
 
-  factory AuthenticationCubit.create() =>
-      AuthenticationCubit(getIt.get(), getIt.get());
+  factory AuthenticationCubit.create() => AuthenticationCubit(getIt.get());
 
   void login({required String username, required String password}) async {
     emit(const AuthenticationState.loading());
@@ -28,8 +27,20 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
         emit(AuthenticationState.error(l));
       },
       (r) async {
-        await _secureStorge.setToken(r);
-        emit(const AuthenticationState.success());
+        emit(const AuthenticationState.login());
+      },
+    );
+  }
+
+  void logout() async {
+    emit(const AuthenticationState.loading());
+    final result = await _authenticationRepository.logout();
+    result.fold(
+      (l) {
+        emit(AuthenticationState.error(l));
+      },
+      (r) async {
+        emit(const AuthenticationState.logout());
       },
     );
   }

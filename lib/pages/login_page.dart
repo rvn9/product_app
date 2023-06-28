@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
           child: BlocListener<AuthenticationCubit, AuthenticationState>(
             listener: (context, state) => state.maybeWhen(
               orElse: () => null,
-              success: () =>
+              login: () =>
                   AutoRouter.of(context).replace(const ProductPageRoute()),
               error: (error) => Fluttertoast.showToast(
                 msg: error.toString(),

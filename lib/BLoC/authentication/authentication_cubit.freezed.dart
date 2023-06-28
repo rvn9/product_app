@@ -20,7 +20,8 @@ mixin _$AuthenticationState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function() login,
+    required TResult Function() logout,
     required TResult Function(Exception errorObject) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +29,8 @@ mixin _$AuthenticationState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function()? login,
+    TResult? Function()? logout,
     TResult? Function(Exception errorObject)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +38,8 @@ mixin _$AuthenticationState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function()? login,
+    TResult Function()? logout,
     TResult Function(Exception errorObject)? error,
     required TResult orElse(),
   }) =>
@@ -45,7 +48,8 @@ mixin _$AuthenticationState {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthenticationStateInitial value) initial,
     required TResult Function(_AuthenticationStateLoading value) loading,
-    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStateLogin value) login,
+    required TResult Function(_AuthenticationStateLogout value) logout,
     required TResult Function(_AuthenticationStatesError value) error,
   }) =>
       throw _privateConstructorUsedError;
@@ -53,7 +57,8 @@ mixin _$AuthenticationState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthenticationStateInitial value)? initial,
     TResult? Function(_AuthenticationStateLoading value)? loading,
-    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStateLogin value)? login,
+    TResult? Function(_AuthenticationStateLogout value)? logout,
     TResult? Function(_AuthenticationStatesError value)? error,
   }) =>
       throw _privateConstructorUsedError;
@@ -61,7 +66,8 @@ mixin _$AuthenticationState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthenticationStateInitial value)? initial,
     TResult Function(_AuthenticationStateLoading value)? loading,
-    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStateLogin value)? login,
+    TResult Function(_AuthenticationStateLogout value)? logout,
     TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) =>
@@ -130,7 +136,8 @@ class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function() login,
+    required TResult Function() logout,
     required TResult Function(Exception errorObject) error,
   }) {
     return initial();
@@ -141,7 +148,8 @@ class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function()? login,
+    TResult? Function()? logout,
     TResult? Function(Exception errorObject)? error,
   }) {
     return initial?.call();
@@ -152,7 +160,8 @@ class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function()? login,
+    TResult Function()? logout,
     TResult Function(Exception errorObject)? error,
     required TResult orElse(),
   }) {
@@ -167,7 +176,8 @@ class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthenticationStateInitial value) initial,
     required TResult Function(_AuthenticationStateLoading value) loading,
-    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStateLogin value) login,
+    required TResult Function(_AuthenticationStateLogout value) logout,
     required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return initial(this);
@@ -178,7 +188,8 @@ class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthenticationStateInitial value)? initial,
     TResult? Function(_AuthenticationStateLoading value)? loading,
-    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStateLogin value)? login,
+    TResult? Function(_AuthenticationStateLogout value)? logout,
     TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return initial?.call(this);
@@ -189,7 +200,8 @@ class _$_AuthenticationStateInitial implements _AuthenticationStateInitial {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthenticationStateInitial value)? initial,
     TResult Function(_AuthenticationStateLoading value)? loading,
-    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStateLogin value)? login,
+    TResult Function(_AuthenticationStateLogout value)? logout,
     TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
@@ -248,7 +260,8 @@ class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function() login,
+    required TResult Function() logout,
     required TResult Function(Exception errorObject) error,
   }) {
     return loading();
@@ -259,7 +272,8 @@ class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function()? login,
+    TResult? Function()? logout,
     TResult? Function(Exception errorObject)? error,
   }) {
     return loading?.call();
@@ -270,7 +284,8 @@ class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function()? login,
+    TResult Function()? logout,
     TResult Function(Exception errorObject)? error,
     required TResult orElse(),
   }) {
@@ -285,7 +300,8 @@ class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthenticationStateInitial value) initial,
     required TResult Function(_AuthenticationStateLoading value) loading,
-    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStateLogin value) login,
+    required TResult Function(_AuthenticationStateLogout value) logout,
     required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return loading(this);
@@ -296,7 +312,8 @@ class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthenticationStateInitial value)? initial,
     TResult? Function(_AuthenticationStateLoading value)? loading,
-    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStateLogin value)? login,
+    TResult? Function(_AuthenticationStateLogout value)? logout,
     TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return loading?.call(this);
@@ -307,7 +324,8 @@ class _$_AuthenticationStateLoading implements _AuthenticationStateLoading {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthenticationStateInitial value)? initial,
     TResult Function(_AuthenticationStateLoading value)? loading,
-    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStateLogin value)? login,
+    TResult Function(_AuthenticationStateLogout value)? logout,
     TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
@@ -323,39 +341,37 @@ abstract class _AuthenticationStateLoading implements AuthenticationState {
 }
 
 /// @nodoc
-abstract class _$$_AuthenticationStateSuccessCopyWith<$Res> {
-  factory _$$_AuthenticationStateSuccessCopyWith(
-          _$_AuthenticationStateSuccess value,
-          $Res Function(_$_AuthenticationStateSuccess) then) =
-      __$$_AuthenticationStateSuccessCopyWithImpl<$Res>;
+abstract class _$$_AuthenticationStateLoginCopyWith<$Res> {
+  factory _$$_AuthenticationStateLoginCopyWith(
+          _$_AuthenticationStateLogin value,
+          $Res Function(_$_AuthenticationStateLogin) then) =
+      __$$_AuthenticationStateLoginCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_AuthenticationStateSuccessCopyWithImpl<$Res>
-    extends _$AuthenticationStateCopyWithImpl<$Res,
-        _$_AuthenticationStateSuccess>
-    implements _$$_AuthenticationStateSuccessCopyWith<$Res> {
-  __$$_AuthenticationStateSuccessCopyWithImpl(
-      _$_AuthenticationStateSuccess _value,
-      $Res Function(_$_AuthenticationStateSuccess) _then)
+class __$$_AuthenticationStateLoginCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res, _$_AuthenticationStateLogin>
+    implements _$$_AuthenticationStateLoginCopyWith<$Res> {
+  __$$_AuthenticationStateLoginCopyWithImpl(_$_AuthenticationStateLogin _value,
+      $Res Function(_$_AuthenticationStateLogin) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
-  const _$_AuthenticationStateSuccess();
+class _$_AuthenticationStateLogin implements _AuthenticationStateLogin {
+  const _$_AuthenticationStateLogin();
 
   @override
   String toString() {
-    return 'AuthenticationState.success()';
+    return 'AuthenticationState.login()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuthenticationStateSuccess);
+            other is _$_AuthenticationStateLogin);
   }
 
   @override
@@ -366,10 +382,11 @@ class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function() login,
+    required TResult Function() logout,
     required TResult Function(Exception errorObject) error,
   }) {
-    return success();
+    return login();
   }
 
   @override
@@ -377,10 +394,11 @@ class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function()? login,
+    TResult? Function()? logout,
     TResult? Function(Exception errorObject)? error,
   }) {
-    return success?.call();
+    return login?.call();
   }
 
   @override
@@ -388,12 +406,13 @@ class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function()? login,
+    TResult Function()? logout,
     TResult Function(Exception errorObject)? error,
     required TResult orElse(),
   }) {
-    if (success != null) {
-      return success();
+    if (login != null) {
+      return login();
     }
     return orElse();
   }
@@ -403,10 +422,11 @@ class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthenticationStateInitial value) initial,
     required TResult Function(_AuthenticationStateLoading value) loading,
-    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStateLogin value) login,
+    required TResult Function(_AuthenticationStateLogout value) logout,
     required TResult Function(_AuthenticationStatesError value) error,
   }) {
-    return success(this);
+    return login(this);
   }
 
   @override
@@ -414,10 +434,11 @@ class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthenticationStateInitial value)? initial,
     TResult? Function(_AuthenticationStateLoading value)? loading,
-    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStateLogin value)? login,
+    TResult? Function(_AuthenticationStateLogout value)? logout,
     TResult? Function(_AuthenticationStatesError value)? error,
   }) {
-    return success?.call(this);
+    return login?.call(this);
   }
 
   @override
@@ -425,19 +446,144 @@ class _$_AuthenticationStateSuccess implements _AuthenticationStateSuccess {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthenticationStateInitial value)? initial,
     TResult Function(_AuthenticationStateLoading value)? loading,
-    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStateLogin value)? login,
+    TResult Function(_AuthenticationStateLogout value)? logout,
     TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
-    if (success != null) {
-      return success(this);
+    if (login != null) {
+      return login(this);
     }
     return orElse();
   }
 }
 
-abstract class _AuthenticationStateSuccess implements AuthenticationState {
-  const factory _AuthenticationStateSuccess() = _$_AuthenticationStateSuccess;
+abstract class _AuthenticationStateLogin implements AuthenticationState {
+  const factory _AuthenticationStateLogin() = _$_AuthenticationStateLogin;
+}
+
+/// @nodoc
+abstract class _$$_AuthenticationStateLogoutCopyWith<$Res> {
+  factory _$$_AuthenticationStateLogoutCopyWith(
+          _$_AuthenticationStateLogout value,
+          $Res Function(_$_AuthenticationStateLogout) then) =
+      __$$_AuthenticationStateLogoutCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_AuthenticationStateLogoutCopyWithImpl<$Res>
+    extends _$AuthenticationStateCopyWithImpl<$Res,
+        _$_AuthenticationStateLogout>
+    implements _$$_AuthenticationStateLogoutCopyWith<$Res> {
+  __$$_AuthenticationStateLogoutCopyWithImpl(
+      _$_AuthenticationStateLogout _value,
+      $Res Function(_$_AuthenticationStateLogout) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_AuthenticationStateLogout implements _AuthenticationStateLogout {
+  const _$_AuthenticationStateLogout();
+
+  @override
+  String toString() {
+    return 'AuthenticationState.logout()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_AuthenticationStateLogout);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function() login,
+    required TResult Function() logout,
+    required TResult Function(Exception errorObject) error,
+  }) {
+    return logout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function()? login,
+    TResult? Function()? logout,
+    TResult? Function(Exception errorObject)? error,
+  }) {
+    return logout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function()? login,
+    TResult Function()? logout,
+    TResult Function(Exception errorObject)? error,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AuthenticationStateInitial value) initial,
+    required TResult Function(_AuthenticationStateLoading value) loading,
+    required TResult Function(_AuthenticationStateLogin value) login,
+    required TResult Function(_AuthenticationStateLogout value) logout,
+    required TResult Function(_AuthenticationStatesError value) error,
+  }) {
+    return logout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AuthenticationStateInitial value)? initial,
+    TResult? Function(_AuthenticationStateLoading value)? loading,
+    TResult? Function(_AuthenticationStateLogin value)? login,
+    TResult? Function(_AuthenticationStateLogout value)? logout,
+    TResult? Function(_AuthenticationStatesError value)? error,
+  }) {
+    return logout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AuthenticationStateInitial value)? initial,
+    TResult Function(_AuthenticationStateLoading value)? loading,
+    TResult Function(_AuthenticationStateLogin value)? login,
+    TResult Function(_AuthenticationStateLogout value)? logout,
+    TResult Function(_AuthenticationStatesError value)? error,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _AuthenticationStateLogout implements AuthenticationState {
+  const factory _AuthenticationStateLogout() = _$_AuthenticationStateLogout;
 }
 
 /// @nodoc
@@ -511,7 +657,8 @@ class _$_AuthenticationStatesError implements _AuthenticationStatesError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function() login,
+    required TResult Function() logout,
     required TResult Function(Exception errorObject) error,
   }) {
     return error(errorObject);
@@ -522,7 +669,8 @@ class _$_AuthenticationStatesError implements _AuthenticationStatesError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loading,
-    TResult? Function()? success,
+    TResult? Function()? login,
+    TResult? Function()? logout,
     TResult? Function(Exception errorObject)? error,
   }) {
     return error?.call(errorObject);
@@ -533,7 +681,8 @@ class _$_AuthenticationStatesError implements _AuthenticationStatesError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function()? login,
+    TResult Function()? logout,
     TResult Function(Exception errorObject)? error,
     required TResult orElse(),
   }) {
@@ -548,7 +697,8 @@ class _$_AuthenticationStatesError implements _AuthenticationStatesError {
   TResult map<TResult extends Object?>({
     required TResult Function(_AuthenticationStateInitial value) initial,
     required TResult Function(_AuthenticationStateLoading value) loading,
-    required TResult Function(_AuthenticationStateSuccess value) success,
+    required TResult Function(_AuthenticationStateLogin value) login,
+    required TResult Function(_AuthenticationStateLogout value) logout,
     required TResult Function(_AuthenticationStatesError value) error,
   }) {
     return error(this);
@@ -559,7 +709,8 @@ class _$_AuthenticationStatesError implements _AuthenticationStatesError {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_AuthenticationStateInitial value)? initial,
     TResult? Function(_AuthenticationStateLoading value)? loading,
-    TResult? Function(_AuthenticationStateSuccess value)? success,
+    TResult? Function(_AuthenticationStateLogin value)? login,
+    TResult? Function(_AuthenticationStateLogout value)? logout,
     TResult? Function(_AuthenticationStatesError value)? error,
   }) {
     return error?.call(this);
@@ -570,7 +721,8 @@ class _$_AuthenticationStatesError implements _AuthenticationStatesError {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_AuthenticationStateInitial value)? initial,
     TResult Function(_AuthenticationStateLoading value)? loading,
-    TResult Function(_AuthenticationStateSuccess value)? success,
+    TResult Function(_AuthenticationStateLogin value)? login,
+    TResult Function(_AuthenticationStateLogout value)? logout,
     TResult Function(_AuthenticationStatesError value)? error,
     required TResult orElse(),
   }) {
