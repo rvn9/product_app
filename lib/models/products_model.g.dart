@@ -8,31 +8,31 @@ part of 'products_model.dart';
 
 _$_ProductsModel _$$_ProductsModelFromJson(Map<String, dynamic> json) =>
     _$_ProductsModel(
-      bestProduct: (json['best_product'] as List<dynamic>)
+      bestProduct: (json['bestProduct'] as List<dynamic>)
           .map((e) => Product.fromJson(e as Map<String, dynamic>))
           .toList(),
-      allProduct: (json['all_product'] as List<dynamic>)
+      allProduct: (json['allProduct'] as List<dynamic>)
           .map((e) => Product.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
 Map<String, dynamic> _$$_ProductsModelToJson(_$_ProductsModel instance) =>
     <String, dynamic>{
-      'best_product': instance.bestProduct,
-      'all_product': instance.allProduct,
+      'bestProduct': instance.bestProduct,
+      'allProduct': instance.allProduct,
     };
 
 _$_Product _$$_ProductFromJson(Map<String, dynamic> json) => _$_Product(
-      id: json['id'] as String,
+      id: json['id'] as int,
       name: json['name'] as String,
-      imageUrl: json['image_url'] as String,
-      productDescription: json['product_description'] as String,
+      imageUrl: json['imageUrl'] as String,
+      productDescription: json['productDescription'] as String,
     );
 
 Map<String, dynamic> _$$_ProductToJson(_$_Product instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,
-      'image_url': instance.imageUrl,
-      'product_description': instance.productDescription,
+      'imageUrl': instance.imageUrl,
+      'productDescription': instance.productDescription,
     };

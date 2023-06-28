@@ -6,7 +6,8 @@ import '../injector.dart';
 
 class ProductRepository {
   final ProductService _productService;
-  late ProductsModel products;
+  final allProduct = <Product>[];
+  final bestProduct = <Product>[];
   ProductRepository(this._productService);
 
   factory ProductRepository.create() => ProductRepository(getIt.get());
@@ -14,20 +15,30 @@ class ProductRepository {
   Future<Either<Exception, ProductsModel>> getProducts() async {
     try {
       final result = await _productService.getProducts();
-      products = result;
+      allProduct.addAll(result.allProduct);
+      bestProduct.addAll(result.bestProduct);
       return Right(result);
     } catch (e) {
-      return Left(Exception());
+      return Left(Exception(e));
     }
   }
 
-  Future<Either<Exception, ProductsModel>> addProduct(Product product) async {
+  Future<Either<Exception, ProductsModel>> addProduct(
+      String name, String desc) async {
     try {
-      final result = await _productService.addProduct(product);
-      products.allProduct.add(result);
+      final newProduct = Product(
+        id: allProduct.length + 1,
+        name: name,
+        imageUrl: "https://via.placeholder.com/100x100",
+        productDescription: desc,
+      );
+      await _productService.addProduct(newProduct);
+      allProduct.insert(0, newProduct);
+      final products =
+          ProductsModel(bestProduct: bestProduct, allProduct: allProduct);
       return Right(products);
     } catch (e) {
-      return Left(Exception());
+      return Left(Exception(e));
     }
   }
 }

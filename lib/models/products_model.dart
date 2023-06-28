@@ -17,7 +17,7 @@ class ProductsModel with _$ProductsModel {
 @freezed
 class Product with _$Product {
   factory Product({
-    required String id,
+    required int id,
     required String name,
     required String imageUrl,
     required String productDescription,

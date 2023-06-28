@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:product_app/widgets/custom_button_widget.dart';
 
 import '../BLoC/authentication/authentication_cubit.dart';
 import '../auth_guard.dart';
@@ -138,23 +139,15 @@ class _LoginPageState extends State<LoginPage> {
                   const Spacer(),
                   SizedBox(
                     width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                      onPressed: () {
+                    child: CustomButtonWidget(
+                      onClick: () {
                         if (key.currentState?.validate() ?? false) {
                           _authenticationCubit.login(
                               username: _usernameController.text,
                               password: _passwordController.text);
                         }
                       },
-                      child: Text(
-                        "Login",
-                        style: TextStyle(fontSize: 16.sp),
-                      ),
+                      title: "Login",
                     ),
                   ),
                 ],

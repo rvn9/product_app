@@ -43,9 +43,13 @@ class AppRouters extends _i4.RootStackRouter {
       );
     },
     ProductDetailRoute.name: (routeData) {
+      final args = routeData.argsAs<ProductDetailRouteArgs>();
       return _i4.AdaptivePage<dynamic>(
         routeData: routeData,
-        child: const _i3.ProductDetail(),
+        child: _i3.ProductDetail(
+          key: args.key,
+          addProduct: args.addProduct,
+        ),
         opaque: true,
       );
     },
@@ -101,12 +105,40 @@ class ProductPageRoute extends _i4.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.ProductDetail]
-class ProductDetailRoute extends _i4.PageRouteInfo<void> {
-  const ProductDetailRoute()
-      : super(
+class ProductDetailRoute extends _i4.PageRouteInfo<ProductDetailRouteArgs> {
+  ProductDetailRoute({
+    _i5.Key? key,
+    required dynamic Function(
+      String,
+      String,
+    ) addProduct,
+  }) : super(
           ProductDetailRoute.name,
           path: 'product_detail',
+          args: ProductDetailRouteArgs(
+            key: key,
+            addProduct: addProduct,
+          ),
         );
 
   static const String name = 'ProductDetailRoute';
+}
+
+class ProductDetailRouteArgs {
+  const ProductDetailRouteArgs({
+    this.key,
+    required this.addProduct,
+  });
+
+  final _i5.Key? key;
+
+  final dynamic Function(
+    String,
+    String,
+  ) addProduct;
+
+  @override
+  String toString() {
+    return 'ProductDetailRouteArgs{key: $key, addProduct: $addProduct}';
+  }
 }

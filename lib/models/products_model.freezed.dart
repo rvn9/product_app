@@ -194,7 +194,7 @@ Product _$ProductFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Product {
-  String get id => throw _privateConstructorUsedError;
+  int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
   String get productDescription => throw _privateConstructorUsedError;
@@ -209,8 +209,7 @@ abstract class $ProductCopyWith<$Res> {
   factory $ProductCopyWith(Product value, $Res Function(Product) then) =
       _$ProductCopyWithImpl<$Res, Product>;
   @useResult
-  $Res call(
-      {String id, String name, String imageUrl, String productDescription});
+  $Res call({int id, String name, String imageUrl, String productDescription});
 }
 
 /// @nodoc
@@ -235,7 +234,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -259,8 +258,7 @@ abstract class _$$_ProductCopyWith<$Res> implements $ProductCopyWith<$Res> {
       __$$_ProductCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String id, String name, String imageUrl, String productDescription});
+  $Res call({int id, String name, String imageUrl, String productDescription});
 }
 
 /// @nodoc
@@ -282,7 +280,7 @@ class __$$_ProductCopyWithImpl<$Res>
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -312,7 +310,7 @@ class _$_Product implements _Product {
       _$$_ProductFromJson(json);
 
   @override
-  final String id;
+  final int id;
   @override
   final String name;
   @override
@@ -359,7 +357,7 @@ class _$_Product implements _Product {
 
 abstract class _Product implements Product {
   factory _Product(
-      {required final String id,
+      {required final int id,
       required final String name,
       required final String imageUrl,
       required final String productDescription}) = _$_Product;
@@ -367,7 +365,7 @@ abstract class _Product implements Product {
   factory _Product.fromJson(Map<String, dynamic> json) = _$_Product.fromJson;
 
   @override
-  String get id;
+  int get id;
   @override
   String get name;
   @override

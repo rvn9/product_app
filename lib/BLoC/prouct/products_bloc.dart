@@ -29,7 +29,8 @@ class ProductsBloc extends Bloc<ProductsEvent, ProductsState> {
     on<ProductsEventAddProduct>(
       (event, emit) async {
         emit(const ProductsState.loading());
-        final results = await _productRepository.addProduct(event.product);
+        final results =
+            await _productRepository.addProduct(event.name, event.desc);
         results.fold(
           (l) => emit(ProductsState.error(l)),
           (r) => emit(ProductsState.success(r)),

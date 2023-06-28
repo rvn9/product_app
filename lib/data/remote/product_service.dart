@@ -22,7 +22,7 @@ class ProductService extends Endpoint {
 
   Future<Product> addProduct(Product product) async {
     final url = endpointBaseUrlWithVersion(path: 'products');
-    final response = await _baseService.dio.post(url, data: product);
+    final response = await _baseService.dio.post(url, data: product.toJson());
     final result = Product.fromJson(jsonDecode(response.data));
     return result;
   }

@@ -20,21 +20,21 @@ mixin _$ProductsEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadProducts,
-    required TResult Function(Product product) addProduct,
+    required TResult Function(String name, String desc) addProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadProducts,
-    TResult? Function(Product product)? addProduct,
+    TResult? Function(String name, String desc)? addProduct,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadProducts,
-    TResult Function(Product product)? addProduct,
+    TResult Function(String name, String desc)? addProduct,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,7 +128,7 @@ class _$ProductsEventInitial
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadProducts,
-    required TResult Function(Product product) addProduct,
+    required TResult Function(String name, String desc) addProduct,
   }) {
     return initial();
   }
@@ -138,7 +138,7 @@ class _$ProductsEventInitial
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadProducts,
-    TResult? Function(Product product)? addProduct,
+    TResult? Function(String name, String desc)? addProduct,
   }) {
     return initial?.call();
   }
@@ -148,7 +148,7 @@ class _$ProductsEventInitial
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadProducts,
-    TResult Function(Product product)? addProduct,
+    TResult Function(String name, String desc)? addProduct,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -246,7 +246,7 @@ class _$ProductsEventloadProducts
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadProducts,
-    required TResult Function(Product product) addProduct,
+    required TResult Function(String name, String desc) addProduct,
   }) {
     return loadProducts();
   }
@@ -256,7 +256,7 @@ class _$ProductsEventloadProducts
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadProducts,
-    TResult? Function(Product product)? addProduct,
+    TResult? Function(String name, String desc)? addProduct,
   }) {
     return loadProducts?.call();
   }
@@ -266,7 +266,7 @@ class _$ProductsEventloadProducts
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadProducts,
-    TResult Function(Product product)? addProduct,
+    TResult Function(String name, String desc)? addProduct,
     required TResult orElse(),
   }) {
     if (loadProducts != null) {
@@ -320,9 +320,7 @@ abstract class _$$ProductsEventAddProductCopyWith<$Res> {
           $Res Function(_$ProductsEventAddProduct) then) =
       __$$ProductsEventAddProductCopyWithImpl<$Res>;
   @useResult
-  $Res call({Product product});
-
-  $ProductCopyWith<$Res> get product;
+  $Res call({String name, String desc});
 }
 
 /// @nodoc
@@ -336,22 +334,19 @@ class __$$ProductsEventAddProductCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? product = null,
+    Object? name = null,
+    Object? desc = null,
   }) {
     return _then(_$ProductsEventAddProduct(
-      null == product
-          ? _value.product
-          : product // ignore: cast_nullable_to_non_nullable
-              as Product,
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      desc: null == desc
+          ? _value.desc
+          : desc // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ProductCopyWith<$Res> get product {
-    return $ProductCopyWith<$Res>(_value.product, (value) {
-      return _then(_value.copyWith(product: value));
-    });
   }
 }
 
@@ -360,14 +355,16 @@ class __$$ProductsEventAddProductCopyWithImpl<$Res>
 class _$ProductsEventAddProduct
     with DiagnosticableTreeMixin
     implements ProductsEventAddProduct {
-  const _$ProductsEventAddProduct(this.product);
+  const _$ProductsEventAddProduct({required this.name, required this.desc});
 
   @override
-  final Product product;
+  final String name;
+  @override
+  final String desc;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ProductsEvent.addProduct(product: $product)';
+    return 'ProductsEvent.addProduct(name: $name, desc: $desc)';
   }
 
   @override
@@ -375,7 +372,8 @@ class _$ProductsEventAddProduct
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'ProductsEvent.addProduct'))
-      ..add(DiagnosticsProperty('product', product));
+      ..add(DiagnosticsProperty('name', name))
+      ..add(DiagnosticsProperty('desc', desc));
   }
 
   @override
@@ -383,11 +381,12 @@ class _$ProductsEventAddProduct
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProductsEventAddProduct &&
-            (identical(other.product, product) || other.product == product));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.desc, desc) || other.desc == desc));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, product);
+  int get hashCode => Object.hash(runtimeType, name, desc);
 
   @JsonKey(ignore: true)
   @override
@@ -401,9 +400,9 @@ class _$ProductsEventAddProduct
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() loadProducts,
-    required TResult Function(Product product) addProduct,
+    required TResult Function(String name, String desc) addProduct,
   }) {
-    return addProduct(product);
+    return addProduct(name, desc);
   }
 
   @override
@@ -411,9 +410,9 @@ class _$ProductsEventAddProduct
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? loadProducts,
-    TResult? Function(Product product)? addProduct,
+    TResult? Function(String name, String desc)? addProduct,
   }) {
-    return addProduct?.call(product);
+    return addProduct?.call(name, desc);
   }
 
   @override
@@ -421,11 +420,11 @@ class _$ProductsEventAddProduct
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? loadProducts,
-    TResult Function(Product product)? addProduct,
+    TResult Function(String name, String desc)? addProduct,
     required TResult orElse(),
   }) {
     if (addProduct != null) {
-      return addProduct(product);
+      return addProduct(name, desc);
     }
     return orElse();
   }
@@ -466,10 +465,12 @@ class _$ProductsEventAddProduct
 }
 
 abstract class ProductsEventAddProduct implements ProductsEvent {
-  const factory ProductsEventAddProduct(final Product product) =
-      _$ProductsEventAddProduct;
+  const factory ProductsEventAddProduct(
+      {required final String name,
+      required final String desc}) = _$ProductsEventAddProduct;
 
-  Product get product;
+  String get name;
+  String get desc;
   @JsonKey(ignore: true)
   _$$ProductsEventAddProductCopyWith<_$ProductsEventAddProduct> get copyWith =>
       throw _privateConstructorUsedError;
